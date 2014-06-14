@@ -1,0 +1,56 @@
+h1 {
+    color: #fff;
+}
+
+h2 {
+    font-size: 20px;
+}
+
+#top-navbar {
+    width: 100%;
+    top:0;
+}
+
+#top-navbar .navbar .nav,
+#top-navbar .navbar .nav > li {
+    float: none;
+    display: inline-block;
+    *display: inline; /* ie7 fix */
+    *zoom: 1; /* hasLayout ie7 trigger */
+    vertical-align: top;
+}
+
+#top-navbar .navbar-inner {
+    text-align: center;
+}
+
+#main-container {
+    width: 100%;
+}
+
+#center-container {
+    margin: 70px 0 auto;
+    width: 100%;
+}
+
+#center-container .nav {
+    text-align: center;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.center-video {
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
+}
+
+.search-bar {
+    width: 20%;
+    display: inline-block;
+}
+
+.search-button {
+    display: inline-block;
+    margin-top: -3px;
+}

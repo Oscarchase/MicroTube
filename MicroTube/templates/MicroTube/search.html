@@ -1,0 +1,40 @@
+{% extends "MicroTube/base.html" %}
+{% load static %}
+
+{% block head %}
+  <script src="{% static 'MicroTube/js/video.js' %}"></script>
+{% endblock %}
+
+{% block left-container %}
+{% endblock %}
+
+{% block content %}
+  <!-- video results -->
+  <ul class="container-fluid nav">
+    {% for item in new_video %}
+      <li><h2>{{ item.title }}</h2></li>
+      <li><a class="btn" data-toggle="modal" data-target="#new-video-modal" onclick="assign_params({{ item }})"><img src="{{ item.thumbnails }}"></a></li>
+      <li><p>Published: {{ item.pub_date }}</p></li>
+    <hr>
+    {% endfor %}
+  </ul>
+  <!-- end video results -->
+  <!-- modal creation form -->
+  <div class="modal fade" id="new-video-modal">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+          <h4 class="modal-title" id="modal-video-title"></h4>
+        </div>
+        <div class="modal-body">
+          <iframe width="560" height="315" src="" frameborder="0" allowfullscreen id="modal-embedded-player"></iframe>
+        </div>
+        <div class="modal-footer">
+          <p id="modal-video-info"></p>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- end modal creation form -->
+{% endblock %}
